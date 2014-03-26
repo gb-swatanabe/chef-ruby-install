@@ -33,3 +33,12 @@ $ bundle exec knife solo prepare server1
 ```
 $ bundle exec knife solo cook server1
 ```
+
+### その他
+
+/opt/rubyのsymlinkは手動で
+
+```
+$ cd /opt
+$ sudo ln -s ruby-X.X.X ruby
+```
