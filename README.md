@@ -11,8 +11,9 @@ chef cookbooks for ruby install
 必要なgemはGemfileに記述してあります
 
 ```
-$ cd chef
+$ cd chef-ruby-install
 $ bundle install --path=vendor/bundle
+$ bundle exec knife solo init .
 ```
 
 ### 対象の準備
