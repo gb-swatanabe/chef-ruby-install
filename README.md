@@ -1,5 +1,5 @@
-chef cookbooks
-==============
+chef cookbooks for ruby install
+===============================
 
 ## レシピ
 
