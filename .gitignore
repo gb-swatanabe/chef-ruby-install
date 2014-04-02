@@ -1,4 +1,5 @@
 .bundle
+.chef
 vendor/bundle
 Gemfile.lock
 cookbooks
