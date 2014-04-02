@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: ruby211
+# Cookbook Name:: ruby
 # Recipe:: default
 #
 # Copyright 2014, YOUR_COMPANY_NAME
@@ -11,9 +11,19 @@ source_root = node['ruby']['dir']['source']
 source_name = node['ruby']['package']
 source_file = node['ruby']['package'] + ".tar.bz2"
 
-source_url  = "http://cache.ruby-lang.org/pub/ruby/2.1/" + source_file
+VERSION = node['ruby']['version']
+MAJOR, MINOR = VERSION.split(/\./)[0,2]
 
-prefix = node['ruby']['dir']['prefix']
+source_url  = sprintf("http://cache.ruby-lang.org/pub/ruby/%s.%s/%s",
+                      MAJOR,
+                      MINOR,
+                      source_file
+                      )
+
+prefix = sprintf( "%s/ruby-%s",
+                  node['ruby']['dir']['destination'],
+                  VERSION,
+                  )
 
 depend_pkgs = %w{build-essential zlib1g-dev libssl-dev libreadline6-dev libyaml-dev}
 
