@@ -3,4 +3,5 @@
 vendor/bundle
 Gemfile.lock
 cookbooks
+node/*.json
 *~
